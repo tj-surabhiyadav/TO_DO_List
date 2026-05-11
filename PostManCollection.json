@@ -1,0 +1,162 @@
+{
+  "info": {
+    "_postman_id": "5ae87ccf-65f4-4c30-b77c-169c366ad9ea",
+    "name": "My Collection",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51731694",
+    "_collection_link": "https://go.postman.co/collection/51731694-5ae87ccf-65f4-4c30-b77c-169c366ad9ea?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "NEST_CORE",
+      "item": [
+        {
+          "name": "User APIs",
+          "item": [
+            {
+              "name": "Create_User",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\" : \"Surabhi\",\n    \"email\": \"surabhi.yadav@tripjack.com\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get_User_List",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Build task API\",\n  \"description\": \"Implement CRUD endpoints with validation and user relationship\",\n  \"status\": \"TODO\",\n  \"userId\": \"177c9f0d-fc52-4473-a34d-fe2be5753d3b\"\n}\n"
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Users"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Task APIs",
+          "item": [
+            {
+              "name": "Create_Task",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Build task API\",\n  \"description\": \"Implement CRUD endpoints with validation and user relationship\",\n  \"status\": \"TODO\",\n  \"userId\": \"177c9f0d-fc52-4473-a34d-fe2be5753d3b\"\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/tasks",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "tasks"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get_All_Task",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Build task API\",\n  \"description\": \"Implement CRUD endpoints with validation and user relationship\",\n  \"status\": \"TODO\",\n  \"userId\": \"177c9f0d-fc52-4473-a34d-fe2be5753d3b\"\n}\n"
+                },
+                "url": {
+                  "raw": "http://localhost:3000/tasks",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "tasks"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get_task_By_Id",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Build task API\",\n  \"description\": \"Implement CRUD endpoints with validation and user relationship\",\n  \"status\": \"TODO\",\n  \"userId\": \"177c9f0d-fc52-4473-a34d-fe2be5753d3b\"\n}\n"
+                },
+                "url": {
+                  "raw": "http://localhost:3000/tasks/393f4bda-86cb-4131-94f4-e007fc21de52",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "tasks",
+                    "393f4bda-86cb-4131-94f4-e007fc21de52"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -94,3 +94,7 @@ The API rejects unknown fields and validates required fields, email format, UUID
 npm run build
 npm test
 ```
+
+## Postman Collection
+
+Import the collection located at: "PostManCollection.json" into Postman to test all API endpoints.
