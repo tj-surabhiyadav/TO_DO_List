@@ -1,4 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { AuthService } from '../auth/auth.service';
 import { TaskStatus } from './entities/task-status.enum';
 import { TaskController } from './task.controller';
 import { TaskService } from './task.service';
@@ -12,6 +13,11 @@ describe('TaskController', () => {
     findOne: jest.fn(),
     remove: jest.fn(),
     update: jest.fn(),
+    updateStatus: jest.fn(),
+  };
+
+  const authService = {
+    verifyToken: jest.fn(),
   };
 
   beforeEach(async () => {
@@ -21,6 +27,10 @@ describe('TaskController', () => {
         {
           provide: TaskService,
           useValue: taskService,
+        },
+        {
+          provide: AuthService,
+          useValue: authService,
         },
       ],
     }).compile();

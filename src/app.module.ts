@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
@@ -7,6 +7,8 @@ import { UserModule } from './user/user.module';
 import { User } from './user/entities/user.entity';
 import { TaskModule } from './task/task.module';
 import { Task } from './task/entities/task.entity';
+import { RequestLoggerMiddleware } from './common/middleware/request-logger.middleware';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -30,8 +32,13 @@ import { Task } from './task/entities/task.entity';
     }),
     UserModule,
     TaskModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(RequestLoggerMiddleware).forRoutes('*');
+  }
+}
